@@ -1,13 +1,13 @@
 {
-  "$schema": "https://schema.superschema.workers.dev/wrangler.json",
-  "name": "loi-chuc-20-10",
-  "main": "src/index.js",
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "20-11-2",
   "compatibility_date": "2026-10-17",
+  "pages_build_output_dir": "./",
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "loi-chuc-20-10-db",
-      "database_id": "THAY_BANG_DATABASE_ID_CUA_BAN"
+      "database_name": "loichuc2011",
+      "database_id": "8636de14-91bf-49e7-b240-19b8eadbf63d"
     }
   ]
 }
