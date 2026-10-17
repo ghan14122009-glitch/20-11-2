@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f5">
+  <title>Quản trị lời chúc · Little Blossom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="admin-page">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">✿</span><span>little <b>blossom</b></span></a>
+    <a class="top-link" href="/">← Xem trang lời chúc</a>
+  </header>
+  <main class="admin-shell">
+    <section class="admin-login" id="login-section">
+      <div class="login-flower">✿</div>
+      <p class="eyebrow">KHU VỰC RIÊNG</p>
+      <h1>Xin chào, người quản lý.</h1>
+      <p class="hero-description">Đăng nhập để quản lý danh sách người nhận và lời chúc 20/10.</p>
+      <form id="login-form" class="code-form">
+        <label for="admin-password">Mật khẩu quản trị</label>
+        <div class="input-wrap"><span>⌑</span><input id="admin-password" type="password" autocomplete="current-password" required placeholder="Nhập mật khẩu quản trị"></div>
+        <button class="primary-button" type="submit">Đăng nhập <span>↗</span></button>
+        <p class="form-message" id="login-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="small-note">Mật khẩu được thiết lập trong biến môi trường Cloudflare, không lưu trong mã giao diện.</p>
+    </section>
+
+    <section class="dashboard hidden" id="dashboard">
+      <div class="dashboard-heading">
+        <div><p class="eyebrow">BẢNG ĐIỀU KHIỂN</p><h1>Quản lý lời chúc <em>♡</em></h1><p class="muted">Tạo danh sách, đặt mã riêng và viết lời chúc cho từng người.</p></div>
+        <button class="outline-button" id="logout-button" type="button">Đăng xuất</button>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card"><span>Tổng người nhận</span><strong id="stat-total">0</strong></div>
+        <div class="stat-card"><span>Đã có mã riêng</span><strong id="stat-coded">0</strong></div>
+        <div class="stat-card"><span>Chưa đặt mã</span><strong id="stat-empty">0</strong></div>
+      </div>
+      <div class="toolbar">
+        <div class="search-wrap"><span>⌕</span><input id="search-input" type="search" placeholder="Tìm theo tên…"></div>
+        <button class="outline-button" id="seed-button" type="button">＋ Tạo 27 người mẫu</button>
+        <button class="primary-button compact" id="add-button" type="button">＋ Thêm người</button>
+      </div>
+      <p class="dashboard-note" id="dashboard-note">Mã không được hiển thị lại sau khi lưu. Hãy lưu mã ở nơi riêng tư để gửi đúng người.</p>
+      <div class="recipient-list" id="recipient-list"></div>
+      <div class="empty-state hidden" id="empty-state">Chưa có người nhận. Hãy thêm người hoặc tạo danh sách 27 người mẫu.</div>
+    </section>
+  </main>
+
+  <div class="modal-backdrop hidden" id="editor-backdrop">
+    <section class="editor-modal" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+      <div class="modal-heading"><div><p class="eyebrow">LỜI CHÚC CÁ NHÂN</p><h2 id="editor-title">Thêm người nhận</h2></div><button class="icon-button" id="close-editor" type="button" aria-label="Đóng">×</button></div>
+      <form id="recipient-form">
+        <input id="recipient-id" type="hidden">
+        <label for="recipient-name">Tên hiển thị</label><input class="field" id="recipient-name" maxlength="100" required placeholder="Ví dụ: Minh Anh">
+        <label for="recipient-code">Mã truy cập riêng</label><input class="field" id="recipient-code" maxlength="80" autocomplete="off" placeholder="Tự chọn mã dễ nhớ nhưng khó đoán">
+        <p class="field-help" id="code-help">Bắt buộc khi tạo mới. Khi chỉnh sửa, để trống nếu muốn giữ mã hiện tại.</p>
+        <label for="recipient-greeting">Lời chúc dành riêng</label><textarea class="field greeting-field" id="recipient-greeting" rows="7" maxlength="5000" required></textarea>
+        <p class="form-message" id="editor-message" role="status" aria-live="polite"></p>
+        <div class="modal-actions"><button class="outline-button" id="cancel-editor" type="button">Hủy</button><button class="primary-button compact" type="submit">Lưu thay đổi <span>♡</span></button></div>
+      </form>
+    </section>
+  </div>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <footer class="site-footer"><span>Little Blossom · 20/10</span><span>✿</span><a href="/">Trang lời chúc</a></footer>
+  <script src="/assets/admin.js" defer></script>
+</body>
+</html>

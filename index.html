@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f5">
+  <title>Một lời chúc dành riêng cho bạn ✿</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body class="public-page">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="Trang chủ"><span class="brand-mark">✿</span><span>little <b>blossom</b></span></a>
+    <span class="top-date">20 · 10 <span>♡</span></span>
+  </header>
+
+  <main class="hero-shell">
+    <section class="hero-copy">
+      <p class="eyebrow"><span class="eyebrow-line"></span> NGÀY PHỤ NỮ VIỆT NAM <span class="eyebrow-line"></span></p>
+      <h1>Một lời chúc<br><em>dành riêng cho bạn.</em></h1>
+      <p class="hero-description">Có một điều nhỏ xinh được chuẩn bị dành riêng cho bạn. Hãy nhập mã bí mật để mở món quà 20/10 nhé.</p>
+      <div class="tiny-flower-row" aria-hidden="true"><span>✿</span><span>❀</span><span>✿</span></div>
+    </section>
+
+    <section class="unlock-card" id="unlock-card">
+      <div class="card-flower" aria-hidden="true">❀</div>
+      <p class="card-kicker">A LITTLE NOTE FOR YOU</p>
+      <h2>Mở lời chúc của bạn</h2>
+      <p class="card-subtitle">Mỗi người có một chiếc chìa khóa riêng.</p>
+      <form id="code-form" class="code-form">
+        <label for="access-code">Mã bí mật của bạn</label>
+        <div class="input-wrap"><span aria-hidden="true">✧</span><input id="access-code" name="code" type="password" autocomplete="off" placeholder="Nhập mã tại đây" required maxlength="80"></div>
+        <button class="primary-button" type="submit"><span>Mở món quà</span><span aria-hidden="true">↗</span></button>
+        <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+      </form>
+      <div class="card-footer"><span>♡</span> Một chút yêu thương, gửi đến bạn <span>♡</span></div>
+    </section>
+
+    <section class="greeting-panel hidden" id="greeting-panel" aria-live="polite">
+      <button class="text-button back-button" id="back-button" type="button">← Quay lại</button>
+      <div class="greeting-art" aria-hidden="true"><span class="petal p1">✿</span><span class="petal p2">❀</span><span class="petal p3">✿</span><span class="art-heart">♡</span></div>
+      <p class="card-kicker">A NOTE JUST FOR YOU</p>
+      <h2 id="greeting-title">Gửi bạn thương mến,</h2>
+      <div class="greeting-text" id="greeting-text"></div>
+      <div class="signature">Thân thương, <span>♡</span></div>
+      <button class="primary-button again-button" id="again-button" type="button">Khép món quà <span>✧</span></button>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>Được gửi đi bằng sự trân trọng</span><span>✿</span><a href="/admin.html">Quản trị</a></footer>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
