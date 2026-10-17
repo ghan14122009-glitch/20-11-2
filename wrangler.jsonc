@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "phunu1",
+  "name": "phunu2",
   "compatibility_date": "2026-10-17",
   "pages_build_output_dir": "./",
   "d1_databases": [
