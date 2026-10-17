@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.superschema.workers.dev/wrangler.json",
+  "name": "loi-chuc-20-10",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-17",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "loi-chuc-20-10-db",
+      "database_id": "THAY_BANG_DATABASE_ID_CUA_BAN"
+    }
+  ]
+}
